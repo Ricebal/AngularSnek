@@ -1,0 +1,9 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div tabindex="0" id="gameCanvas" (keydown)="onKeyDown($event)">
+  <div class="snake" [ngStyle]="{'grid-column': snake.head.X, 'grid-row': snake.head.Y}"></div>
+  <div class="snake" *ngFor="let tailPiece of snake.tail" [ngStyle]="{'grid-column': tailPiece.X, 'grid-row': tailPiece.Y}"></div>
+  <div class="apple" [ngStyle]="{'grid-column': apple.X, 'grid-row': apple.Y}"></div>
+</div>
+<div>
+  Score: {{snake.tail.length - 4}}
+</div>
